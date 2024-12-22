@@ -22,6 +22,8 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for git info
           token: ${{ secrets.PAT }}
+          submodules: true  # Fetch submodules
+          recursive: true   # Recursively fetch submodules
       - uses: actions/setup-node@v4
         with:
           node-version: 22
