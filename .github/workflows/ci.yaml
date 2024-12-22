@@ -23,7 +23,6 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.PAT }}
-          submodules: true
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -59,7 +58,6 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.PAT }}
-          submodules: true
           
       - name: Setup Node
         uses: actions/setup-node@v4
