@@ -18,6 +18,17 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
+      - name: Debug Submodule Info
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Submodule status:"
+          git submodule status
+          echo "Git modules config:"
+          cat .gitmodules
+          echo "Git config:"
+          git config --list
+          echo "Testing submodule URL access:"
+          git ls-remote https://github.com/kimturing/content.git
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Fetch all history for git info
